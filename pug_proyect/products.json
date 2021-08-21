@@ -1,0 +1,74 @@
+[
+    {
+        "title": "test",
+        "price": "123",
+        "thumbnail": "Postman",
+        "id": 1
+    },
+    {
+        "title": "calculator casio",
+        "price": 1358,
+        "thumbnail": "images/calculator casio.jpg",
+        "id": 2
+    },
+    {
+        "title": "human skull",
+        "price": 735,
+        "thumbnail": "images/human skull.jpg",
+        "id": 3
+    },
+    {
+        "title": "monitor",
+        "price": 2471,
+        "thumbnail": "images/monitor.jpg",
+        "id": 4
+    },
+    {
+        "title": "dog golden",
+        "price": 3954,
+        "thumbnail": "images/dog golden.jpg",
+        "id": 5
+    },
+    {
+        "title": "iphone x12",
+        "price": 3160,
+        "thumbnail": "images/iphone x12.jpg",
+        "id": 6
+    },
+    {
+        "title": "femur",
+        "price": 2321,
+        "thumbnail": "images/femur.jpg",
+        "id": 7
+    },
+    {
+        "title": "bottle",
+        "price": 168,
+        "thumbnail": "images/bottle.jpg",
+        "id": 8
+    },
+    {
+        "title": "orthopedic cervical collar",
+        "price": 371,
+        "thumbnail": "images/orthopedic cervical collar.jpg",
+        "id": 9
+    },
+    {
+        "title": "kitten",
+        "price": 2970,
+        "thumbnail": "images/kitten.jpg",
+        "id": 10
+    },
+    {
+        "title": "apple fruit",
+        "price": 3628,
+        "thumbnail": "images/apple fruit.jpg",
+        "id": 11
+    },
+    {
+        "title": "crowbar",
+        "price": 3791,
+        "thumbnail": "images/crowbar.jpg",
+        "id": 12
+    }
+]
