@@ -2,7 +2,7 @@
   "name": "pug_proyect",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "debug": "nodemon --inspect index.js --config nodemon.json",
@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
+    "joi": "^17.4.2",
     "pug": "^3.0.2"
   },
   "devDependencies": {

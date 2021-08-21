@@ -2,7 +2,7 @@
   "name": "handlebars_proyect",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "debug": "nodemon --inspect index.js --config nodemon.json",
@@ -12,7 +12,8 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
-    "express-handlebars": "^5.3.3"
+    "express-handlebars": "^5.3.3",
+    "joi": "^17.4.2"
   },
   "devDependencies": {
     "nodemon": "^2.0.12"

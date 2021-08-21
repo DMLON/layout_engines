@@ -1,0 +1,29 @@
+
+
+    {{! In case there are products Render this }}
+    {{#if products}}
+    <div class="d-flex flex-column justify-content-center align-items-center">
+        <h1>Products List</h1>
+        <button class="btn btn-primary" id="btn-back" onclick="window.location.href='/';">Add new Product</button>
+        <table class="table table-striped mx-auto" style="max-width: 500px;">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                    <th>Foto</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each products as |product|}}
+                    <tr>
+                        <td> {{product.title}} </td>
+                        <td> $ {{product.price}} </td>
+                        <td> <img src="{{product.thumbnail}}" /> </td>
+                    </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+    {{else}}
+        <h2 class="text-danger">No products found</h2>
+    {{/if}}
