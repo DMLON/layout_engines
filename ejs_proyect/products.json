@@ -70,5 +70,11 @@
         "price": "123",
         "thumbnail": "https://cdn3.iconfinder.com/data/icons/logos-brands-3/24/logo_brand_brands_logos_gmail-64.png",
         "id": 13
+    },
+    {
+        "title": "Gmail",
+        "price": "7456",
+        "thumbnail": "https://cdn3.iconfinder.com/data/icons/logos-brands-3/24/logo_brand_brands_logos_gmail-64.png",
+        "id": 14
     }
 ]

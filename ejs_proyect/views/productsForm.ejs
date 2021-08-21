@@ -1,0 +1,39 @@
+<div class="d-flex flex-column">
+    <h1>Post a new product</h1>
+    <label for="name">Title</label>
+    <input type="text" name="title" id="title">
+    <label for="price">Price</label>
+    <input type="text" name="price" id="price">
+    <label for="thumbnail">Thumbnail</label>
+    <input type="text" name="thumbnail" id="thumbnail">
+    <div id="buttons" class="p-3">
+        <button class="btn btn-primary" id="btn-post">Send</button>
+        <button class="btn btn-secondary" id="btn-getAll" onclick="window.location.href='/products';">View All</button>
+    </div>
+</div>
+
+<script>
+
+    document.querySelector("#btn-post").addEventListener("click", async (event) => {
+        event.preventDefault();
+        const action =`/products`
+        const title = document.querySelector("#title").value;
+        const price = document.querySelector("#price").value;
+        const thumbnail = document.querySelector("#thumbnail").value;
+
+        try{
+            const resp = await fetch(action,{
+                method:'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({title:title,price:price,thumbnail:thumbnail})
+            });
+            window.location.href = resp.url;
+        }
+        catch(err){
+            console.log(error);
+        }
+    });
+</script>

@@ -1,8 +1,24 @@
 const express = require('express');
-const app = express();
+const expressLayouts = require('express-ejs-layouts');
 
+const app = express();
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+// Set views folder and engine
 app.set('views','./views');
 app.set('view engine','ejs');
+
+// ------- express layout config ---------
+// Use layouts
+app.use(expressLayouts)
+
+// Give Layout file
+app.set('layout', './layouts/layoutFrame')
+
+// Throw all scripts to the end of the file
+app.set("layout extractScripts", true)
+
 
 // ------------- End Express Configuration ----------------
 
@@ -20,7 +36,6 @@ app.get('/products', async (req,res)=>{
     console.log('GET /products');
     products = await db.getAll();
     res.render("productsShow", {
-        layout: "layoutFrame",
         products,
     });
 });
