@@ -13,13 +13,13 @@ const db = new Container('./products.json');
 
 // main form containing infor for new products
 app.get("/", (req, res) => {
-    res.render("productsForm", { layout: "layoutFrame" });
+    res.render("productsForm");
 });
 
 app.get('/products', async (req,res)=>{
     console.log('GET /products');
     products = await db.getAll();
-    res.render("products", {
+    res.render("productsShow", {
         layout: "layoutFrame",
         products,
     });
@@ -34,7 +34,7 @@ app.post('/products',validateProduct, async (req,res)=>{
         console.log(error);
     }
     console.log("POST /products");
-    res.redirect("/");
+    res.status(301).redirect("/");
 });
 
 
@@ -42,8 +42,8 @@ app.post('/products',validateProduct, async (req,res)=>{
 const PORT = 8080;
 app.listen(PORT, (err) => {
     if(err)
-        throw new Error(`Error creating server $${err }`);
-    console.log(`Server started on $${PORT }`);
+        throw new Error(`Error creating server ${err }`);
+    console.log(`Server started on ${PORT }`);
 });
 
 

@@ -1,0 +1,22 @@
+extends layoutFrame.pug 
+
+block content 
+    if products.lenght < 1
+        h2(class="text-danger") No products found
+    else
+        div(class="d-flex flex-column justify-content-center align-items-center")
+            h1 Products List 
+            button(class="btn btn-primary" id="btn-back" onclick="window.location.href='/';") Add new Product
+            table(class="table table-striped mx-auto" style="max-width: 500px;")
+                thead
+                    tr
+                        th Nombre
+                        th Precio
+                        th Foto
+                tbody
+                    each product in products
+                        tr
+                            td=product.title
+                            td=product.price
+                            td
+                                img(src=product.thumbnail)

@@ -32,7 +32,6 @@ app.get('/products', async (req,res)=>{
     console.log('GET /products');
     products = await db.getAll();
     res.render("productsShow", {
-        layout: "layoutFrame",
         products,
     });
 });
